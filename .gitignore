@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / 编辑器
+.idea/
+.vscode/
+
+# Node（如需引入工具链）
+node_modules/
