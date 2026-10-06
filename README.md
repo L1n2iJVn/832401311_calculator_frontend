@@ -33,10 +33,9 @@
 
 ```
 832401311_calculator_frontend/
-├── src/
-│   ├── index.html    # 页面结构
-│   ├── style.css     # 样式
-│   └── app.js        # 交互与 API 请求
+├── index.html    # 页面结构
+├── style.css     # 样式
+├── app.js        # 交互与 API 请求
 ├── README.md
 ├── codestyle.md
 └── .gitignore
@@ -46,12 +45,11 @@
 
 ### 方式一：直接打开
 
-双击 `src/index.html` 即可在浏览器打开（前提是后端已在运行）。
+双击 `index.html` 即可在浏览器打开（前提是后端已在运行）。
 
 ### 方式二：本地静态服务器（推荐）
 
 ```bash
-cd src
 python -m http.server 8080
 ```
 
@@ -59,16 +57,16 @@ python -m http.server 8080
 
 ## 配置后端地址
 
-编辑 `src/app.js` 顶部的常量：
+编辑 `app.js` 顶部的常量：
+
+```js
+const API_BASE = "https://eight32401311-calculator-backend.onrender.com";
+```
+
+本地开发时改为：
 
 ```js
 const API_BASE = "http://127.0.0.1:8000";
-```
-
-改为你部署的后端地址，例如：
-
-```js
-const API_BASE = "https://your-backend.onrender.com";
 ```
 
 ## 前后端连接方式
@@ -92,12 +90,12 @@ const API_BASE = "https://your-backend.onrender.com";
 
 ### GitHub Pages
 
-1. 仓库 Settings → Pages → Source 选择分支，Folder 选 `/src`。
+1. 仓库 Settings → Pages → Source 选 **Deploy from a branch**，Branch 选 `main`，Folder 选 **`/ (root)`**。
 2. 部署前先把 `app.js` 的 `API_BASE` 改成线上后端地址。
 
 ### Vercel / Netlify
 
-1. 导入仓库，Root Directory（输出目录）设为 `src`。
+1. 导入仓库，Root Directory（输出目录）**留空**（文件在根目录）。
 2. 构建命令留空（纯静态，无构建）。
 
 ## 代码规范
