@@ -6,7 +6,7 @@
 //   const API_BASE = "https://your-backend.onrender.com";
 // 本地开发默认指向 127.0.0.1:8000）
 // ---------------------------------------------------------------------------
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://eight32401311-calculator-backend.onrender.com";
 
 const expressionEl = document.getElementById("expression");
 const resultEl = document.getElementById("result");
